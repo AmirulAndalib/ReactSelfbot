@@ -1,6 +1,7 @@
 # React Selfbot
 ## Yes, for real
 
+#Props to @ReactDev1337
 
 ### Why am I making this open source?
 Because can't stop calling my product a rat, tokenlogger and what else not.
