@@ -127,3 +127,17 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+DetectedSelfbotUsers.json
+Tokens.txt
+Statuses.txt
+Spam.txt
+SniperTokens.txt
+Proxies.txt
+FavoriteCommands.txt
+DisabledCommands.txt
+CustomCommands.json
+config.json
+GiveawayBots.json
+Scripts/example.py
+Themes/default.json
+TODO.json
