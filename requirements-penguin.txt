@@ -42,7 +42,6 @@ psutil==5.8.0
 pycparser==2.20
 pycryptodome==3.10.4
 pyfiglet==0.8.post1
-pypiwin32==223
 pypresence==4.2.0
 pyPrivnote==0.0.1a1
 qrcode==7.3
