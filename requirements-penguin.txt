@@ -47,7 +47,7 @@ pyPrivnote==0.0.1a1
 qrcode==7.3
 requests==2.26.0
 requests-futures==1.0.0
-rfc3986==
+rfc3986
 six==1.16.0
 sjcl==0.2.1
 sniffio==1.2.0
