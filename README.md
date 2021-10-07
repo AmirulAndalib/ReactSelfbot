@@ -1,4 +1,4 @@
-# React Selfbot
+# React Selfbot [![Time Spent](https://wakatime.com/badge/github/FlawCra/ReactSelfbot.svg)](#) [![official FlawCra project](https://flawcra.cc/img/badges/official_flat.svg)](https://github.com/FlawCra)
 ## Yes, for real
 
 # Props to [@ReactDev1337](https://github.com/ReactDev1337/ReactSelfbot)
