@@ -5,8 +5,6 @@
 
 ## ⚠ Welcome to the "Maintained" version ⚠
 
-### ⚠ Run from source as bin is currently broken ⚠
-
 ### Why am I making this open source?
 Because can't stop calling my product a rat, tokenlogger and what else not.
 
