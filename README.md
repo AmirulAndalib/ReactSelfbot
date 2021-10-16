@@ -1,4 +1,4 @@
-# React Selfbot [![Time Spent](https://wakatime.com/badge/github/FlawCra/ReactSelfbot.svg)](#) [![Build for Windows](https://github.com/FlawCra/ReactSelfbot/actions/workflows/build.yml/badge.svg)](#) [![official FlawCra project](https://flawcra.cc/img/badges/official_flat.svg)](https://github.com/FlawCra)
+# React Selfbot [![Time Spent](https://wakatime.com/badge/github/FlawCra/ReactSelfbot.svg)](#) [![Build for Windows](https://github.com/FlawCra/ReactSelfbot/actions/workflows/build.yml/badge.svg)](https://github.com/FlawCra/ReactSelfbot/releases) [![official FlawCra project](https://flawcra.cc/img/badges/official_flat.svg)](https://github.com/FlawCra)
 ## Yes, for real
 
 # Props to [@ReactDev1337](https://github.com/ReactDev1337/ReactSelfbot)
@@ -34,28 +34,6 @@ The selfbot works on Windows, Linux (x64_x86/ARMv7) and should work on MacOS (No
 
 ### Note
 This version has some changes since the last version from https://reactselfbot.pro/
-
-Changelog: 
-```toml
-Fixes:
-    [+] Discord.py deprecation warnings should not occur anymore
-    [+] Fixed mockmode disabling itself
-    [+] Fixed calc
-    [+] Fixed wall not setting the relationship, watcher & nickname webhooks
-    [+] Fixed giveawaytimeout not setting properly
-    [+] Fixed some commands & updater not working properly while a DDoS attack
-    [+] MultiToken sniper should now work on windows
-
-Misc:
-    [+] Tweaked the descriptions of some help embeds
-    [+] Added some stuff to showsettings
-    [+] Added abuse
-    [+] Normal Nitro sniper now runs in another thread for more performance
-    [+] Commands now still work when using proxied raid commands
-
-Fun:
-    [+] Added trivia # Not documented (no usage added)
-```
 
 ### Contributing (I know you won't)
 Feel free to contribute I will merge it if it's good or removes some of my code i haven't removed which is no longer used.
