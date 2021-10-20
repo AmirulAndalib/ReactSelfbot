@@ -14,4 +14,4 @@ jobs:
      - name: Verify
        uses: vchain-us/verify-action@master
        with:
-         signerID: moritz.fuessel@flawcra.cc
+         signerID: ${{ secrets.CODENOTARY }}
