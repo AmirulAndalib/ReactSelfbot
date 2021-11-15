@@ -3,7 +3,7 @@
 
 # Props to [@ReactDev1337](https://github.com/ReactDev1337/ReactSelfbot)
 
-## ⚠ Welcome to the "Maintained" version ⚠
+## ⚠ Python 3.10+ not supported ⚠
 
 ### Why am I making this open source?
 Because can't stop calling my product a rat, tokenlogger and what else not.
