@@ -18,7 +18,18 @@ Every single selfbot is pasted and every discord.py command looks the same, now 
 Yes, definetly.
 
 ### How to compile/use?
-I will release a compiled version. If you don't know how to compile it, don't.
+
+#### Precompiled Version
+I released a compiled version. Just run it.
+#### Running from Source
+1. Download source
+2. Install requirements (Linux: `python3 -m pip install -r requirements-linux.txt`, Windows: `pip install -r requirements.txt`)
+3. Run Python file (Linux: `python3 React.py`, Windows: `python React.py`
+#### Docker Version (only Linux x64_x86)
+1. Pull image from DockerHub. (`docker pull enderschesi/reactselfbot`)
+2. Create container. (`docker container run -dit --name ReactSelfbot enderschesi/reactselfbot`)
+4. Attach to container and input info. (`docker container attach ReactSelfbot`)
+5. Press CTRL-p and then CTRL-q to detach from the container.
 
 ### Can I skid this, I mean it's open source?
 If you do, I will make sure everyone knows its from me :)
@@ -31,6 +42,7 @@ I don't care.
 
 ### OS Support
 The selfbot works on Windows, Linux (x64_x86/ARMv7) and should work on MacOS (Not tested)
+The Docker Version is currently only for Linux (x64_x86)
 
 ### Note
 This version has some changes since the last version from https://reactselfbot.pro/
