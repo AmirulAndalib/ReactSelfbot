@@ -19,12 +19,12 @@ Yes, definetly.
 
 ### How to compile/use?
 
-#### Precompiled Version
-I released a compiled version. Just run it.
-#### Running from Source
+#### Running from Source (RECOMMENDED)
 1. Download source
 2. Install requirements (Linux: `python3 -m pip install -r requirements-linux.txt`, Windows: `pip install -r requirements.txt`)
 3. Run Python file (Linux: `python3 React.py`, Windows: `python React.py`
+#### Precompiled Version
+I released a compiled version. Just run it.
 #### Docker Version (only Linux x64_x86)
 1. Pull image from DockerHub. (`docker pull enderschesi/reactselfbot`)
 2. Create container. (`docker container run -dit --name ReactSelfbot enderschesi/reactselfbot`)
