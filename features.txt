@@ -66,7 +66,6 @@ countdown <From> <To> | Counts from one number to another (down)
 texttobinary <Text> | Converts text to binary
 binarytotext <Binary> | Converts binary to text
 toenchantmenttable <Text> | Translates english to enchantment table language
-cembed <"Title"> ["Description"] ["Footer"] ["Image URL"] | Custom embed
 clear | Clear the chat without permissions
 shrug | Sends a shrug text emoticon
 tableflip | Sends a tableflip text emoticon
@@ -578,7 +577,6 @@ mordor <"Text 1"> <"Text 2"> | Mordor meme
 morpheus <"Text 1"> <"Text 2"> | Matrix Morpheus meme
 pigeon <"Text 1"> <"Text 2"> | Is this a pigeon meme
 spiderman <"Text 1"> <"Text 2"> | Spiderman pointing at Spiderman meme
-spongemock <"Text 1"> <"Text 2"> | Mocking Spongebob meme
 ds <"Text 1"> <"Text 2"> | Daily Struggle meme
 ps4 <User> | PS4 Cover
 thanos <User> | Thanos effect
