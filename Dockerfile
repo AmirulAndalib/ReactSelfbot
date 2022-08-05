@@ -7,7 +7,7 @@ WORKDIR /var/reactdiscordbot
 RUN apt-get update -y && apt-get upgrade -y && \
     apt-get install git zip unzip python3 curl wget \
     python3 python3-pip python3-lxml speedtest-cli libpq-dev \
-    gcc g++ libffi-dev \
+    gcc g++ libffi-dev libcairo2-dev pkg-config python3-dev \
     make autoconf automake libtool software-properties-common -y
 
 COPY . .
