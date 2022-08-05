@@ -29,4 +29,4 @@ sty==1.0.0rc2
 tcp_latency==0.0.11
 upsidedown==0.4
 urbandict==0.6.1
-youtube_dl==2021.6.6
+yt_dlp
