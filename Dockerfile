@@ -1,17 +1,23 @@
-FROM python:3.9-slim-bullseye
+FROM ubuntu:22.04
 
-WORKDIR /var/app
+SHELL ["/bin/bash", "-c"]
 
-RUN apt-get update && \
-    apt-get install --upgrade -y git &&  \
-    apt-get install --upgrade -y build-essential
-	
-RUN git clone https://github.com/enderschesi/ReactSelfbot.git
+WORKDIR /var/reactdiscordbot
 
-WORKDIR /var/app/ReactSelfbot
+RUN apt-get update -y && apt-get upgrade -y && \
+    apt-get install git zip unzip python3 curl wget \
+    python3 python3-pip python3-lxml speedtest-cli libpq-dev \
+    gcc g++ libffi-dev \
+    make autoconf automake libtool software-properties-common -y
 
-RUN pip install wheel
+COPY . .
 
-RUN pip install -r requirements-linux.txt
+RUN pip3 install wheel && pip3 install --upgrade setuptools
 
-ENTRYPOINT ["python", "React.py"]
+RUN pip3 install --no-cache-dir -U -r requirements.txt --no-deps
+
+ENV LANG="en_US.UTF-8" LANGUAGE="en_US:en" LC_ALL="en_US.UTF-8"
+
+RUN rm -r .git -f
+
+CMD ["bash", "start.sh"]
