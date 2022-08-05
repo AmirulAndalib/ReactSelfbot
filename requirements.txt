@@ -16,6 +16,7 @@ numpy
 playsound
 praw
 privatebinapi
+multidict
 psutil
 pycryptodome
 pyfiglet
