@@ -14,7 +14,7 @@ COPY . .
 
 RUN pip3 install wheel && pip3 install --upgrade setuptools
 
-RUN pip3 install --no-cache-dir -U -r requirements.txt --no-deps
+RUN pip3 install --no-cache-dir -U -r requirements.txt
 
 ENV LANG="en_US.UTF-8" LANGUAGE="en_US:en" LC_ALL="en_US.UTF-8"
 
