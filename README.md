@@ -1,5 +1,13 @@
 # React Selfbot [![Time Spent](https://wakapi.flawcra.cc/api/badge/Lion0565/interval:any/project:ReactSelfbot)](#) [![Build for Windows](https://github.com/FlawCra/ReactSelfbot/actions/workflows/build.yml/badge.svg)](https://github.com/FlawCra/ReactSelfbot/releases) [![official FlawCra project](https://badges.flawcra.cc/official_flat)](https://github.com/FlawCra)
-## Yes, for real
+
+## ⚠ Deprecation Notice  ⚠
+**Effective immediately, we regret to inform you that React Selfbot is officially deprecated and will no longer be supported. This means that we will no longer provide updates, bug fixes, or technical support for this software.**
+
+**We understand that this may cause inconvenience for our users, but we believe that this is the best decision for the security and stability of our product. We strongly recommend that you stop using React Selfbot and uninstall it from your system.**
+
+**We apologize for any inconvenience this may cause, and we appreciate your understanding. If you have any further questions, please don't hesitate to contact our support team.**
+
+**Thank you for using React Selfbot. ❤️**
 
 # Props to [@ReactDev1337](https://github.com/ReactDev1337/ReactSelfbot)
 
